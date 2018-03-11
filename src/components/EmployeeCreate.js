@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Picker, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { employeeUpdate, employeeCreate } from '../actions';
+import { employeeUpdate, employeeCreate, employeeFetch } from '../actions';
 import { Card, CardSection, Input, Button } from './common';
 
 class EmployeeCreate extends Component {
@@ -74,5 +74,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { 
-  employeeUpdate, employeeCreate 
+  employeeUpdate, employeeCreate, employeeFetch 
 })(EmployeeCreate);
